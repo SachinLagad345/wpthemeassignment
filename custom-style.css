@@ -1,0 +1,135 @@
+/* header */
+
+.headerclass {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 105px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.urlclass {
+    display: flex; 
+    font-weight: bold;
+    font-size: 14px;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 40px;
+}
+
+.urlclass li{
+    padding: 0px 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.urlclass li a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.urlclass li a:hover{
+    background-color: #ef4634;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.urlclass_form__search {
+    width: 150px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 1px solid #62585f;
+    border-radius: 3px;
+}
+
+/* //header */
+
+/* red box container */
+
+.red-box-container
+{
+    height: 544px;
+    background-color: #e73d2d;
+}
+
+.red-box-container_background {
+    background-image: url(./assets/images/slider-image.png);
+    background-size: 100% 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 3px;
+}
+
+.red-box-container_content
+{
+    padding-bottom: 40px;
+}
+
+.red-box-container_content__title
+{
+    font-size: 70px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 20px 0px;
+    text-shadow: 2px #950904;
+}
+
+.red-box-container_content__subtitle
+{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+}
+/* //red box container */
+
+/* Features */
+.feature_content
+{   height: 101px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature_content__column {
+    display: flex;
+    align-items: center;
+}
+
+.feature_content__text
+{
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.feature_content__heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ef4634;
+    text-shadow: 2px #ffffff;
+    margin: 5px;
+}
+
+.feature_content__heading:hover
+{
+    color: #222222;
+}
+
+.feature_content__column img{
+    size: 50px;
+}
+
+.feature_content__description
+{
+    font-size: 13px;
+    color: #333333;
+    line-height: 19.5px;
+    margin: 5px;
+}

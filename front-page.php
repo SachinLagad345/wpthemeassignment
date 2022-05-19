@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-	<title>Portfolio</title>
+	<title><?php echo get_the_title(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<!-- fonts -->
@@ -15,11 +15,12 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" type="text/css" href="portfolio.css">
+	<?php
+	wp_head();
+	?>
 </head>
 
 <?php
-wp_head();
-
 get_header();
 ?>
 
@@ -39,6 +40,29 @@ get_header();
 	get_template_part( 'template-parts/content', 'feature' );
 	?>
 
+	<!-- Gallery -->
+	<section class="gallery_section">
+		<div class="gallery_container">
+			<div class="gallery_header__container">
+				<h2 class="gallery_header__header">D'SIGN IS THE SOUL</h2>
+				<button onclick="designfly_goto_porfolio()"><span class="gallery_header__button"> view all</span></button>
+			</div>
+			<hr style="height: 1px; width: 100%; background-color: #62585f;">
+
+			<?php get_template_part( 'template-parts/content', 'portfolio' ); ?>
+
+			<hr style="height: 1px; width: 100%; background-color: #62585f;">
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		const designfly_goto_porfolio = () => window.location.href = '<?php echo esc_url( get_site_url() ); ?>/portfolio';
+	</script>
+	<!-- //Gallery -->
+
+	<?php
+		get_footer();
+	?>
 </body>
 
 </html>

@@ -83,7 +83,7 @@
     font-weight: bold;
     color: #ffffff;
     margin: 20px 0px;
-    text-shadow: 2px #950904;
+    text-shadow: 2px 2px #950904;
 }
 
 .red-box-container_content__subtitle
@@ -117,7 +117,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #ef4634;
-    text-shadow: 2px #ffffff;
+    text-shadow: 2px 2px #fff;
     margin: 5px;
 }
 
@@ -167,7 +167,7 @@
     font-weight: 300;
     font-size: 45px;
     color: #62585f;
-    text-shadow: 2px #ffffff;
+    text-shadow: 2px 2px #fff;
 }
 
 .gallery_header__container button
@@ -356,7 +356,7 @@
 {
     font-size: 35px;
     color: #62585f;
-    text-shadow: 2px #ffffff;
+    text-shadow: 2px 2px #fff;
 }
 
 .single_post_subheading__container
@@ -396,3 +396,33 @@
     text-decoration: underline;
 }
 /* //Single Post*/
+
+/* Comments Section */
+.comment_container
+{
+    width: 100%;
+}
+
+.comment_heading
+{
+    font-size: 18px;
+    font-weight: normal;
+    color: #62585f;
+    margin: 10px 0px;
+}
+
+.comment_reply_title
+{
+    font-size: 18px;
+    color: #62585f;
+    margin-top: 20px;
+}
+
+.comment_textarea
+{
+    margin: 5px 0px;
+    width: 620px;
+    height: 90px;
+    background-color: #fff;
+    border: 1px solid #62585f;
+}

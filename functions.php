@@ -122,3 +122,27 @@ function custom_post_type() {
 	register_post_type( 'portfolio', $args );
 }
 add_action( 'init', 'custom_post_type', 0 );
+
+
+function register_widget_areas()
+{
+	register_sidebar(
+		array(
+			'before_title' => '',
+			'after_title'  => '',
+			'before_widget' => '',
+			'after_widget' => '',
+			'name'		   => 'right-sidebar',
+			'id'		   => 'sidebar-1',
+			'description'  => 'right sidebar widget area',
+		)
+	);
+}
+
+add_action('widgets_init','register_widget_areas');
+
+// Portfolio Widget
+require_once( 'widgets/widgets-portfolio.php' );
+
+// Recent_posts Widget
+require_once( 'widgets/widgets-recentposts.php' );

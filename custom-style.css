@@ -185,7 +185,7 @@
     background-color: #222222;
 }
 
-..gallery_header__button:hover
+.gallery_header__button:hover
 {
     background-color: #ef4634;
     cursor: pointer;
@@ -336,6 +336,11 @@
     margin-top: 50px;
 }
 
+.single-post-wrapper
+{
+    padding-right: 30px;
+}
+
 .single_post__content p
 {
     margin: 15px 0px;
@@ -394,6 +399,13 @@
 .single_post__tags-para:hover
 {
     text-decoration: underline;
+}
+
+.single_sidebar
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 /* //Single Post*/
 
@@ -477,3 +489,89 @@
     border-radius: 5px;
     margin-right: 10px;
 }
+/* // Comments section */
+
+/* Sidebar portfolio */
+.sidebar__heading {
+    font-size: 25px;
+    font-weight: 400;
+    color: #62585f;
+    text-shadow: 2px 2px #fff;
+    margin-bottom: 10px;
+}
+
+.sidebar__hr {
+    width: 100%;
+    background-color: #62585f;
+}
+
+.single-post-card {
+  margin-bottom: 30px;
+}
+
+.porfolio--gallery {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, calc(100%/4.2));
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 5px;
+  }
+  
+  .porfolio--gallery a
+  {
+      width: 100%;
+  }
+
+  .portfolio--gallery-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    aspect-ratio: 1.66;
+  }
+  /* //Sidebar portfolio */
+
+  /* Sidebar Recent Posts */
+  .sidebar__recent-post-image-box {
+    float: left;
+    width: 20%;
+    padding-left: 20px;
+  }
+  
+  .sidebar__recent-post-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+  }
+  
+  .sidebar__recent-post-details {
+    float: left;
+    width: 80%
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar__recent-post-image-box {
+      float: left;
+      width: 30%;
+      padding-left: 20px;
+    }
+  
+    .sidebar__recent-post-details {
+      float: left;
+      width: 70%
+    }
+  }
+  
+  .sidebar__recent-post-title {
+    font-size: 14px;
+    color: #62585f;
+  }
+  
+  .sidebar__recent-post-title:hover {
+    color: #ef4634;
+  }
+  
+  .sidebar__recent-post-details {
+    color: #62585f;
+    font-size: 12px;
+  }
+/* // Recent Posts */

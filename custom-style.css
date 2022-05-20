@@ -418,6 +418,12 @@
     margin-top: 20px;
 }
 
+#commentform
+{
+    display: flex;
+    flex-direction: column;
+}
+
 .comment_textarea
 {
     margin: 5px 0px;
@@ -425,4 +431,49 @@
     height: 90px;
     background-color: #fff;
     border: 1px solid #62585f;
+}
+
+.comment_form__lower_container
+{
+    display: flex;
+}
+
+.comment_form__three_fields
+{
+    margin-right: 17px;
+}
+
+#comment_url_block
+{
+    margin-right: 0px;
+}
+
+.comment_form__three_fields-input
+{
+    width: 195px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #62585f;
+    margin: 10px 0px;
+}
+
+.comment_form__three_fields-name
+{
+    font-size: 14px;
+    color: #62585f;
+}
+
+#commentform .form-submit
+{
+    align-self: flex-end;
+}
+
+#commentform .submit
+{
+    font-size: 14px;
+    color: #fff;
+    padding: 10px;
+    background-color: #222222;
+    border-radius: 5px;
+    margin-right: 10px;
 }

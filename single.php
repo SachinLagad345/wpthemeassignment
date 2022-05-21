@@ -54,31 +54,29 @@
 							<p class="single_post__tags-para"><?php the_tags(); ?> </p>
 						</div>
 
-                        <?php
-                            comments_template();
-                        ?>
-
-					</div>
-					<!-- //single post wrapper -->
-
-					<!-- single sidebar area -->
-					<div class="single_sidebar">
 						<?php
-							dynamic_sidebar('sidebar-1');
+						comments_template();
 						?>
-					</div>
+
+				</div>
+				<!-- //single post wrapper -->
+
+				<!-- single sidebar area -->
+				<div class="single_sidebar">
+					<?php
+					dynamic_sidebar( 'sidebar-1' );
+					?>
+				</div>
 				</div>
 				<!-- //single container -->
 			</section>
 
 			<?php
-        }
-    }
-    else
-    {
-        echo "<h1> No Post Found!!</h1>";
-    }
-    get_footer();
-?>
+		}
+	} else {
+		echo '<h1> No Post Found!!</h1>';
+	}
+	get_footer();
+	?>
 
 </html>

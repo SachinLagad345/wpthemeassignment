@@ -667,6 +667,7 @@
 .blog__post_right_body
 {
     padding-left: 20px;
+    width: 380px;
 }
 
 .blog__post_subheading
@@ -674,9 +675,32 @@
     display: flex;
     justify-content: space-between;
     font-size: 13px;
+    color: #62585f;
+}
+
+.blog__post_subheading p a:link 
+{
+    text-decoration: none;
+}
+
+.blog__post_subheading p a:hover
+{
+    text-decoration: underline;
 }
 
 .blog__author-name
 {
     color: #ef4634;
+}
+
+.blog__post-read-more
+{
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.blog__post-read-more a:link
+{
+    color: #ef4634;
+    text-decoration: none;
 }

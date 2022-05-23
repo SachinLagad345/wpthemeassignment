@@ -1,65 +1,71 @@
+<?php
+/**
+ * Theme Name: WPThemeAssignment
+ * Theme URI: https://wordpress.org/themes/wpthemeassignment/
+ * Author: Sachin Lagad
+ * Author URI: https://sachinlagad.com/
+ * Description: This is testing purpose theme development
+ * Requires at least: 5.3
+ * Tested up to: 5.9
+ * Requires PHP: 5.6
+ * Version: 1.0
+ *
+ * @package theme
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: wpthemeassignment
+ * Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+ * WPThemeAssignment WordPress Theme, (C) 2020 WordPress.org
+ * WPThemeAssignment is distributed under the terms of the GNU GPL.
+ */
+
+?>
 <!-- Search Archive Page -->
-<!doctype html>
-<html lang="en-US">
-
-<head>
-	<title><?php echo get_the_title(); ?></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="UTF-8">
-	<!-- fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400;500;700&family=Roboto&family=Rubik+Glitch&family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
-	<!-- // fonts -->
-
-	<!-- icons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<link rel="stylesheet" type="text/css" href="portfolio.css">
-	<?php
-	wp_head();
-	?>
-</head>
-
-
-<body>
-	<?php
-	get_header();
-	get_template_part( 'template-parts/content', 'feature' );
-	?>
+<?php
+get_header();
+get_template_part( 'template-parts/content', 'feature' );
+?>
 
 
 
-	<!-- Blog and Sidebar Section -->
+<!-- Blog and Sidebar Section -->
 
-    <div class="container-wrapper">
-	<div class="container">
-				<h2 class="blog__heading">Results for: 
+<div class="container-wrapper">
+	<div class="single-container">
+		<div class="blog_post__wrapper">
+			<h2 class="blog__heading">Results for:
 				<?php
 				if ( isset( $_GET['s'] ) ) {
-					echo $_GET['s'];}
-				?>
-				</h2>
-				<hr style="height: 1px; background-color: #62585f; margin: 10px 0px;">
-				<?php
-				if ( have_posts() ) {
-					while ( have_posts() ) {
-						the_post();
-						get_template_part( 'template-parts/content', 'archive' );
-					}
+					echo esc_attr( wp_unslash( $_GET['s'] ) );
 				}
 				?>
+			</h2>
+			<hr style="height: 1px; background-color: #62585f; margin: 10px 0px;">
+			<?php
+			if ( have_posts() ) {
+				while ( have_posts() ) {
+					the_post();
+					get_template_part( 'template-parts/content', 'archive' );
+				}
+			}
+			?>
 
-			<?php get_template_part( 'template-parts/content', 'sidebar' ); ?>
+		</div>
+		<!-- //blog-post-wrapper -->
+
+		<?php get_template_part( 'template-parts/content', 'sidebar' ); ?>
 
 
-	<!-- Pagination -->
+		<!-- Pagination -->
 		<div class="blog__pagination">
 			<?php
-			echo paginate_links(
-				array(
-					'before_page_number' => '<span class="blog__pagination-item">',
-					'after_page_number'  => '</span>',
+			echo esc_attr(
+				paginate_links(
+					array(
+						'before_page_number' => '<span class="blog__pagination-item">',
+						'after_page_number'  => '</span>',
+					)
 				)
 			);
 			?>
@@ -67,12 +73,8 @@
 
 		<hr style="height: 1px; background-color: #62585f; ">
 
-    </div>
-    <!-- container -->
-    </div>
-    <!-- container-wrapper -->
-	<?php get_footer(); ?>
-
-</body>
-
-</html>
+	</div>
+	<!-- container -->
+</div>
+<!-- container-wrapper -->
+<?php get_footer(); ?>

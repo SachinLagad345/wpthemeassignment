@@ -746,3 +746,9 @@
       font-size: 13px;
       font-weight: 300;
   }
+
+/* Page */
+.page-content-wrapper
+{
+    width: 100%;
+}

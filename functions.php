@@ -146,3 +146,6 @@ require_once( 'widgets/widgets-portfolio.php' );
 
 // Recent_posts Widget
 require_once( 'widgets/widgets-recentposts.php' );
+
+// Monthly_archive Widget
+require_once( 'widgets/widgets-monthlyarchive.php' );

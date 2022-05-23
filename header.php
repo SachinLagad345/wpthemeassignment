@@ -22,33 +22,57 @@
 
 ?>
 
-<header id="header-one" class="headerclass">
-	<div class="img-logo-class">
-		<?php
-		if ( function_exists( 'the_custom_logo' ) ) {
-			the_custom_logo();
-		}
-		?>
-	</div>
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	<title><?php echo esc_attr( get_the_title() ); ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
 	<?php
-	wp_nav_menu(
-		array(
-			'menu'           => 'primary',
-			'content'        => 'div',
-			'theme_location' => 'primary',
-			'items_wrap'     => '<ul class="urlclass">%3$s</ul>',
-		)
-	);
-	// removed 'walker' => new Assignment_Menu_Walker() arg.
+	wp_head();
 	?>
+</head>
 
-    <form action="<?php echo get_site_url(); ?>" method="get" role="search">
+<body>
 
-			<input class="urlclass_form__search" type="search" name="s" id="s" required autocomplete="off">
-			<button type="submit" id="searchsubmit" style="padding:0; background-color: transparent; border: none; position:relative; top:4px;">
-				<img class="cursor-pointer" src="<?php echo get_template_directory_uri(); ?>/assets/images/header-search.png" alt="search icon">
-			</button>
+	<div class="container-wrapper box__shadow">
+		<div class="container">
+			<header id="header-one" class="headerclass">
+				<div class="img-logo-class">
+					<?php
+					if ( function_exists( 'the_custom_logo' ) ) {
+						the_custom_logo();
+					}
+					?>
+				</div>
+				<!-- Header right menu group -->
+				<div class="header-menugroup">
+					<?php
+					wp_nav_menu(
+						array(
+							'menu'           => 'primary',
+							'content'        => 'div',
+							'theme_location' => 'primary',
+							'items_wrap'     => '<ul class="urlclass">%3$s</ul>',
+						)
+					);
+					// removed 'walker' => new Assignment_Menu_Walker() arg.
+					?>
 
-	</form>
+					<form action="<?php echo esc_url( get_site_url() ); ?>" method="get" role="search">
 
-</header>
+						<input class="urlclass_form__search" type="search" name="s" id="s" required autocomplete="off">
+						<button type="submit" id="searchsubmit" style="padding:0; background-color: transparent; border: none; position:relative; top:4px;">
+							<img class="cursor-pointer" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/header-search.png" alt="search icon">
+						</button>
+
+					</form>
+
+				</div>
+				<!-- //header menu group -->
+			</header>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //container-wrapper -->

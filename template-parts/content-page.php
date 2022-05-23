@@ -21,29 +21,7 @@
  */
 
 ?>
-
-<?php
-get_header();
-get_template_part( 'template-parts/content', 'feature' );
-?>
-<!-- Gallery -->
-<section class="gallery_section">
-	<div class="gallery_container">
-		<div class="gallery_header__container">
-			<h2 class="gallery_header__header">D'SIGN IS THE SOUL</h2>
-			<div class="gallery_header__button-group">
-				<button><span class="gallery_header__group-btn"> view all</span></button>
-			</div>
-		</div>
-		<hr style="height: 1px; width: 100%; background-color: #62585f;">
-
-		<?php get_template_part( 'template-parts/content', 'portfolio' ); ?>
-
-		<hr style="height: 1px; width: 100%; background-color: #62585f;">
-	</div>
-</section>
-<!-- //Gallery -->
-
-<?php
-get_footer();
-?>
+<!-- shows content of page -->
+<hr style="height: 1px; background-color: #62585f;">
+<span class="single-blog__post-text"><?php the_content(); ?></span>
+<hr style="height: 1px; background-color: #62585f;">

@@ -21,23 +21,27 @@
  */
 
 ?>
+
+<!-- Category Archive Page -->
 <?php
 get_header();
 get_template_part( 'template-parts/content', 'feature' );
 ?>
 
 
-<div class="container-wrapper">
-	<div class="single-container">
+
+<!-- Blog and Sidebar Section -->
+
+<div class="container">
+	<div class="row">
 		<!-- Blog -->
 		<div class="blog-column">
-			<h2 class="blog__heading">Tag: <?php echo single_cat_title( '', false ); ?></h2>
-			<hr style="height: 1px; background-color: #62585f; margin: 10px 0px;">
+			<h2 class="blog__heading">Category: <?php echo single_cat_title( '', false ); ?></h2>
+			<hr style="height: 1px; background-color: #62585f;">
 			<?php
 			$post_query_options = array(
-				'post_type'      => array( 'post', 'portfolio' ),
-				'paged'          => get_query_var( 'paged' ),
-				'posts_per_page' => 5,
+				'post_type' => array( 'post', 'portfolio' ),
+				'paged'     => get_query_var( 'paged' ),
 			);
 			$post_query         = new WP_Query( $post_query_options );
 			if ( $post_query->have_posts() ) {

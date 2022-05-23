@@ -3,9 +3,9 @@
  * This class extends from WP_Widget class defines all code necessary to run this custom widget.
  *
  * @since           1.0.0
- * @package         designfly
- * @subpackage      designfly/widgets
- * @author          Tejas Sonawane <sonawane.tejas.21@gmail.com>
+ * @package         wpthemeassignment
+ * @subpackage      wpthemeassignment/widgets
+ * @author          Sachin Lagad <sachin.lagad@hbwsl.com>
  * Description      widget to display portfolio thumbnails.
  */
 class designfly_portfolio_widget extends WP_Widget
@@ -51,7 +51,6 @@ class designfly_portfolio_widget extends WP_Widget
         <div class="single-post-card">
         <h3 class="sidebar__heading">Portfolio</h3>
         <hr class="sidebar__hr">
-        </div>
         <div class="porfolio--gallery">
 <?php
           $portfolio_query_options = array(

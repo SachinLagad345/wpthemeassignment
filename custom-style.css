@@ -642,7 +642,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    padding-left: 10px;
     align-items: center;
     border: 1px solid #fff;
 }
@@ -704,3 +704,35 @@
     color: #ef4634;
     text-decoration: none;
 }
+
+/* Pagination */
+.blog__pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .blog__pagination-item {
+    font-size: 16px;
+    font-weight: 500;
+    /* color: #222; */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    /* padding-top: 3px; */
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .blog__pagination-item:hover, .prev:hover, .next:hover {
+    color: #fff;
+    background-color: #ef4634;
+    border-radius: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .blog-column
+  {
+      padding-right: 20px;
+  }

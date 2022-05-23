@@ -233,7 +233,7 @@
 }
 /* //Gallery- portfolio */
 
-/* Welcome and Contact Section */
+/* Welcome and Contact Section Footer*/
 
 .wc {
     display: flex;
@@ -736,4 +736,13 @@
   .blog-column
   {
       padding-right: 20px;
+  }
+
+  /* footeer */
+
+  .footer__copyright
+  {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 300;
   }

@@ -39,7 +39,7 @@
 					<div class="single-post-wrapper">
 						<h1 class="single-post_heading"><?php echo the_title(); ?> </h1>
 						<div class="single_post_subheading__container">
-							<p class="single-post__subheading_para"> by <span class="author_name"><?php echo get_the_author(); ?></span> on <span class="author_name"><?php echo get_the_date(); ?></span></p>
+							<p class="single-post__subheading_para"> by <a href="<?php get_author_link(true, get_the_author_ID() ); ?>"><span class="author_name"><?php echo get_the_author(); ?></span></a> on <span class="author_name"><?php echo get_the_date(); ?></span></p>
 							<p class="author_name"> <?php echo get_comments_number(); ?> comments </p>
 						</div>
 						<!-- //single post subheading container -->
@@ -62,11 +62,10 @@
 				<!-- //single post wrapper -->
 
 				<!-- single sidebar area -->
-				<div class="single_sidebar">
-					<?php
-					dynamic_sidebar( 'sidebar-1' );
-					?>
-				</div>
+				<?php
+					get_template_part( 'template-parts/content', 'sidebar' );
+				?>
+
 				</div>
 				<!-- //single container -->
 			</section>

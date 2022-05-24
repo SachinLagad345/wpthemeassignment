@@ -38,7 +38,7 @@
 			</p>
 		</div>
 		<div class="blog__post_title">
-			<?php the_title(); ?>
+		<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 		</div>
 	</div>
 	<!-- //blog post header-->

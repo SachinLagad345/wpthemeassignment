@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Theme Name: WPThemeAssignment
  * Theme URI: https://wordpress.org/themes/wpthemeassignment/
@@ -36,17 +35,9 @@ get_template_part( 'template-parts/content', 'feature' );
 	<div class="single-container">
 
 		<div class="blog-column">
-			<h2 class="blog__heading">
-				More posts by Author
-				<?php
-				$curauth = ( get_query_var( 'author_name' ) ) ? get_user_by( 'slug', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
-				echo esc_attr( $curauth->nickname );
-				?>
-			</h2>
+			<h2 class="blog__heading"><?php echo single_cat_title( '', false ); ?></h2>
 			<hr style="height: 1px; background-color: #62585f; margin: 10px 0px;">
 			<?php
-			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-
 			if ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post();
@@ -55,26 +46,35 @@ get_template_part( 'template-parts/content', 'feature' );
 			}
 			?>
 
-			<!-- Pagination -->
-			<div class="blog__pagination">
-				<?php
-				echo paginate_links(
-					array(
-						'before_page_number' => '<span class="blog__pagination-item">',
-						'after_page_number'  => '</span>',
-
-					)
-				);
-				?>
-			</div>
-
 		</div>
 		<!-- single blog column -->
 
 		<?php get_template_part( 'template-parts/content', 'sidebar' ); ?>
 
 	</div>
-
 </section>
+
+
+<!-- Pagination -->
+<div class="container">
+	<div class="blog__pagination">
+		<?php
+		echo esc_attr(
+			paginate_links(
+				array(
+					'before_page_number' => '<span class="blog__pagination-item">',
+					'after_page_number'  => '</span>',
+				)
+			)
+		);
+		?>
+	</div>
+</div>
+
+<div class="container-wrapper">
+	<div class="container">
+		<hr style="height: 1px; background-color: #62585f; ">
+	</div>
+</div>
 
 <?php get_footer(); ?>

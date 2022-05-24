@@ -60,10 +60,10 @@
 					// removed 'walker' => new Assignment_Menu_Walker() arg.
 					?>
 
-					<form action="<?php echo esc_url( get_site_url() ); ?>" method="get" role="search">
+					<form class="header__search-form" action="<?php echo esc_url( get_site_url() ); ?>" method="get" role="search">
 
 						<input class="urlclass_form__search" type="search" name="s" id="s" required autocomplete="off">
-						<button type="submit" id="searchsubmit" style="padding:0; background-color: transparent; border: none; position:relative; top:4px;">
+						<button type="submit" id="searchsubmit" style="padding:0; background-color: transparent; border: none; position:relative;">
 							<img class="cursor-pointer" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/header-search.png" alt="search icon">
 						</button>
 

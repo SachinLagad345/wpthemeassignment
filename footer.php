@@ -56,7 +56,7 @@
 				<?php dynamic_sidebar( 'footer-1' ); ?>
 				<div class="footer__copyright">
 					<p>
-						&copy; 2012 - D'SIGNfly | Designed by <span class="footer__designed-by">rtCamp</span>
+						<span class="footer__copyright_first"> 2012 - D'SIGNfly | </span> Designed by <span class="footer__designed-by">rtCamp</span>
 					</p>
 				</div>
 				<!-- //copyright -->

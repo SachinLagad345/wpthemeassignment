@@ -46,13 +46,11 @@ get_header();
 		<div class="gallery_container">
 			<div class="gallery_header__container">
 				<h2 class="gallery_header__header">D'SIGN IS THE SOUL</h2>
-				<button onclick="designfly_goto_porfolio()"><span class="gallery_header__button"> view all</span></button>
+				<a onclick="designfly_goto_porfolio()"><span class="gallery_header__button"> view all</span></a>
 			</div>
 			<hr style="height: 1px; width: 100%; background-color: #62585f;">
 
 			<?php get_template_part( 'template-parts/content', 'portfolio' ); ?>
-
-			<hr style="height: 1px; width: 100%; background-color: #62585f;">
 		</div>
 	</section>
 

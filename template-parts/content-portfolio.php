@@ -67,13 +67,11 @@
 <div class="container">
 	<div class="blog__pagination">
 		<?php
-		echo esc_attr(
-			paginate_links(
+		echo paginate_links(
 				array(
 					'before_page_number' => '<span class="blog__pagination-item">',
 					'after_page_number'  => '</span>',
 				)
-			)
 		);
 		?>
 	</div>

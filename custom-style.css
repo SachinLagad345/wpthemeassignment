@@ -465,6 +465,66 @@
     margin-top: 20px;
 }
 
+.comment
+{
+    list-style: none;
+    font-size: 13px;
+    color: #62585f;
+}
+
+.comment-author a
+{
+    text-decoration: none;
+    color: #62585f;
+}
+
+.comment-author .fn a:link
+{
+    font-size: 13px;
+    color: #ef4634;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.reply
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reply a
+{
+    text-decoration: none;
+    color: #222222;
+}
+
+.comment-author
+{
+    display: flex;
+}
+
+.comment-right
+{
+    margin-left: 10px;
+}
+
+.comment_author-wrapper
+{
+    margin-bottom: 3px;
+}
+
+.comment-author .fn a:hover
+{
+    text-decoration: underline;
+}
+
+.comment-text
+{
+    font-size: 14px;
+    color: #62585f;
+    line-height: 21px;
+}
+
 #commentform
 {
     display: flex;
@@ -630,6 +690,13 @@
     line-height: 35px;
 }
 
+.blog_header-line
+{
+    height: 1px; width: 100%; 
+    background-color: #62585f;
+    margin: 30px 0px;
+}
+
 .container-wrapper
 {
     width: 100%;
@@ -672,11 +739,10 @@
 
 .blog__post_date
 {
-    border: 1px solid #f1f1f1;
     height: 100%;
-    text-align: center;
-    padding: 3px;
-    border: 1px solid #fff;
+    padding: 9px 10px;
+    line-height: 16px;
+    border: 1px solid white;
 }
 
 .blog__post_title
@@ -684,20 +750,16 @@
     width: 100%;
     height: 100%;
     display: flex;
-    padding-left: 10px;
+    padding-left: 15px;
     align-items: center;
     border: 1px solid #fff;
+    margin-left: -1px;
 }
 
 .blog__post_title a
 {
     color: #fff;
     text-decoration: none;
-}
-
-.blog__post_title a:hover
-{
-    text-decoration: underline;
 }
 
 .blog__post_body
@@ -996,13 +1058,15 @@
     {
         display: grid;
         grid-template-columns: auto auto;
-        grid-column-gap: 15px;
-        padding-top: 10px;
+        grid-column-gap: 10px;
+        padding-top: 7px;
     }
     
     .gallery_img
     {
         width: 100%;
+        height: 180px;
+        margin: 2px;
     }
 
     .wc
@@ -1033,6 +1097,7 @@
         display: block;
         width: 100%;
         padding: 10px;
+        margin: 0px;
     }
 
     .single-post-wrapper
@@ -1084,9 +1149,172 @@
         padding: 0px 10px;
     }
 
+    .blog_header-line
+    {
+        margin: 10px 0px;
+    }
+
     .blog_post__wrapper
     {
         width: 100%;
         padding: 0px;
+    }
+
+    .blog__post-read-more
+    {
+        font-size: 12px;
+    }
+
+    .gallery_header__group-btn
+    {
+        padding: 5px;
+    }
+
+    .page-content-wrapper
+    {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Responsive for Mobile */
+
+@media (max-width: 480px) {
+    .red-box-container_content__title
+    {
+        font-size: 25px;
+    }
+
+    .red-box-container_content__subtitle
+    {
+        font-size: 11px;
+    }
+
+    .gallery_header__header
+    {
+        font-size: 23px;
+    }
+
+    .gallery_container 
+    {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .red-box-container
+    {
+        height: 200px;
+    }
+
+    .gallery_header__container
+    {
+        justify-content: space-between;
+    }
+
+    .blog__heading
+    {
+        line-height: 20px;
+    }
+
+    .blog_header-line
+    {
+        margin: 6px 0px;
+    }
+
+    .blog__post_header
+    {
+        height: 40px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .blog__post_date
+    {
+        padding: 2px 6px;
+    }
+
+    .blog__post_img
+    {
+        height: 125px;
+    }
+
+    .blog__post_subheading
+    {
+        display: block;
+    }
+
+}
+
+@media (max-width: 320px)
+{
+    .red-box-container
+    {
+        height: 150px;
+    }
+
+    .red-box-container_background
+    {
+        background-size: 360px 200px;
+    }
+
+    .red-box-container_content
+    {
+        padding-bottom: 20px;
+    }
+
+    .red-box-container_content__title
+    {
+        font-size: 20px;
+    }
+
+    .red-box-container_content__subtitle
+    {
+        display: none;
+    }
+
+    .gallery_header__header
+    {
+        font-size: 20px;
+    }
+
+    .gallery_header__button
+    {
+        font-size: 13px;
+        padding: 3px;
+    }
+
+    .gallery_img
+    {
+        height: 150px;
+    }
+
+    .blog__post_img
+    {
+        height: 100px;
+    }
+
+    .blog__post_header
+    {
+        font-size: 14px;
+    }
+
+    .blog__post_subheading
+    {
+        font-size: 12px;
+    }
+
+    .single-container
+    {
+        font-size: 12px;
+    }
+
+    .footer__copyright
+    {
+        font-size: 12px;
+    }
+
+    .urlclass-responsive li a
+    {
+        font-size: 13px;
     }
 }

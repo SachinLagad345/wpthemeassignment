@@ -15,7 +15,7 @@
 		wp_list_comments(
 			array(
 				'avatar_size' => 0,
-				'style'       => 'div',
+				'callback'    => 'better_comments',
 			)
 		);
 	}

@@ -37,9 +37,9 @@
 			while ( $portfolio_query->have_posts() ) {
 				$portfolio_query->the_post();
 				?>
-				<div>
-					<a href="<?php the_permalink(); ?>">
-						<img class="gallery_img" src="<?php the_post_thumbnail_url(); ?>" alt="portfolio-thumbnail">
+				<div class="galleryin">
+					<a href="<?php the_permalink() ?>" >
+						<img class="gallery_img" src="<?php the_post_thumbnail_url(); ?>" alt="portfolio-thumbnail-new">
 					</a>
 				</div>
 				<?php
@@ -51,7 +51,7 @@
 				the_post();
 				?>
 				<div>
-					<a href="<?php the_permalink(); ?>">
+					<a href="<?php the_post_thumbnail_url() ?>" data-lightbox="mygallery">
 						<img class="gallery_img" src="<?php the_post_thumbnail_url(); ?>" alt="portfolio-thumbnail">
 					</a>
 				</div>

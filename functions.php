@@ -40,12 +40,15 @@ function designfly_register_style() {
 	wp_enqueue_style( 'themeassignment-css', get_template_directory_uri() . '/style.css', array(), $version, 'all' );
 	wp_enqueue_style( 'themeassignment-customcss', get_template_directory_uri() . '/custom-style.css', array(), $version, 'all' );
 	wp_enqueue_style('font-family','https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+	wp_enqueue_style( 'lightboxcss', get_template_directory_uri() .'/assets/css/lightbox.min.css', array(), '2.0', 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'designfly_register_style' );
 
 function designfly_register_script()
 {
 	wp_enqueue_script( 'hamberger', get_template_directory_uri() . '/assets/js/hamberger.js', array(), '1.0', true );
+	wp_enqueue_script( 'jquery', 'jquery-3.6.0.min.js', array(), '3.6.0', true);
+	wp_enqueue_script( 'lightboxjs', get_template_directory_uri() . '/assets/js/lightbox-plus-jquery.min.js', array('jquery'), '2.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'designfly_register_script' );
 
@@ -156,3 +159,6 @@ require_once( 'widgets/widgets-recentposts.php' );
 
 // Monthly_archive Widget
 require_once( 'widgets/widgets-monthlyarchive.php' );
+
+// Custom comments
+require_once( 'better-comments.php' );

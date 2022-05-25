@@ -33,7 +33,7 @@
 			<div class="blog_post__wrapper">
 				<h1 class="blog__heading">LET'S BLOG </h1>
 
-				<hr style="height: 1px; width: 100%; background-color: #62585f; margin: 30px 0px;">
+				<hr  class="blog_header-line">
 				<?php
 				if ( have_posts() ) {
 					while ( have_posts() ) {

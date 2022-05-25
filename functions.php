@@ -43,6 +43,12 @@ function designfly_register_style() {
 }
 add_action( 'wp_enqueue_scripts', 'designfly_register_style' );
 
+function designfly_register_script()
+{
+	wp_enqueue_script( 'hamberger', get_template_directory_uri() . '/assets/js/hamberger.js', array(), '1.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'designfly_register_script' );
+
 // class Assignment_Menu_Walker extends Walker_Nav_Menu
 // {
 

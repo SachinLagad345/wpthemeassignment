@@ -22,7 +22,7 @@
 
 ?>
 <!-- Features -->
-<section class="features" style="background-image: url('<?php echo esc_attr( get_template_directory_uri() ); ?>/assets/images/features-repeatable-bg.png'); background-repeat: 'repeat'">
+<section class="features" style="background-image: url('<?php echo esc_attr( get_template_directory_uri() ); ?>/assets/images/features-repeatable-bg.png');">
 	<div class="container-wrapper">
 		<div class="container">
 			<div class="feature_content">

@@ -35,7 +35,6 @@
 		// echo ' inside comment author if change';
 		// echo $comment_field;
 	} else {
-		echo ' inside comment author else';
 		$fields        = array(
 			'author'  => '<div class="comment_form__three_fields"> <label for="author" class="comment_form__three_fields-name">Name</label><input class="comment_form__three_fields-input" id="author" name="author" type="text" required="required"></input></div>',
 			'email'   => '<div class="comment_form__three_fields"> <label for="email" class="comment_form__three_fields-name">Email</label><input class="comment_form__three_fields-input" id="email" name="email" type="text" required="required"></input></div>',

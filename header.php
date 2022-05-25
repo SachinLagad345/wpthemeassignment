@@ -29,6 +29,8 @@
 	<title><?php echo esc_attr( get_the_title() ); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
+	<!-- icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<?php
 	wp_head();
 	?>
@@ -46,6 +48,11 @@
 					}
 					?>
 				</div>
+
+				<div class="hamburger-icon">
+				<i class="fa fa-bars" onclick="showMenu()"></i>
+				</div>
+
 				<!-- Header right menu group -->
 				<div class="header-menugroup">
 					<?php
@@ -54,7 +61,7 @@
 							'menu'           => 'primary',
 							'content'        => 'div',
 							'theme_location' => 'primary',
-							'items_wrap'     => '<ul class="urlclass">%3$s</ul>',
+							'items_wrap'     => '<ul id="urlclass_id" class="urlclass">%3$s</ul>',
 						)
 					);
 					// removed 'walker' => new Assignment_Menu_Walker() arg.
@@ -71,6 +78,9 @@
 
 				</div>
 				<!-- //header menu group -->
+
+	
+
 			</header>
 		</div>
 		<!-- //container -->

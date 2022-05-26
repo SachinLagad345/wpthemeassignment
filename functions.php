@@ -9,6 +9,7 @@ function designfly_add_theme_supports() {
 	add_theme_support( 'custom-logo' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'nav-menus' );
 }
 
 add_action( 'after_setup_theme', 'designfly_add_theme_supports' );
@@ -52,21 +53,6 @@ function designfly_register_script()
 }
 add_action( 'wp_enqueue_scripts', 'designfly_register_script' );
 
-// class Assignment_Menu_Walker extends Walker_Nav_Menu
-// {
-
-// function start_el(&$output, $item, $depth = 0, $args = \null, $id = 0)
-// {
-// $indent = str_repeat("\t", $depth);
-// $output .= "\n$indent <li class=\"li_class\">";
-// sprintf("\n$indent <li class=\"li_class\">");
-// }
-
-// function end_el(&$output, $item, $depth = 0, $args = \null)
-// {
-// $output .= "</li>";
-// }
-// }
 
 // Register Custom Post Type
 function custom_post_type() {
@@ -151,6 +137,18 @@ function register_widget_areas()
 
 add_action('widgets_init','register_widget_areas');
 
+function change_page_menu_classes($menu)
+{
+    global $post;
+    if (get_post_type($post) == 'portfolio')
+    {
+        $menu = str_replace( 'current_page_item', '', $menu ); // remove all current_page_parent classes
+        $menu = str_replace( 'menu-item-299', 'menu-item-299 current_page_item', $menu ); // add the current_page_parent class to the page you want
+    }
+    return $menu;
+}
+add_filter( 'nav_menu_css_class', 'change_page_menu_classes', 10,2 );
+
 // Portfolio Widget
 require_once( 'widgets/widgets-portfolio.php' );
 
@@ -162,3 +160,5 @@ require_once( 'widgets/widgets-monthlyarchive.php' );
 
 // Custom comments
 require_once( 'better-comments.php' );
+
+require_once( 'custom-walker.php' );

@@ -227,15 +227,17 @@
 
 .gallery
 {
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
     padding-top: 15px;
-    grid-column-gap: 30px;
+    grid-column-gap: 15px;
 }
 
 .gallery_img
 {
-    width: 300px;
+    max-width: 100%;
+    width: 310px;
     height: 210px;
     margin: 5px 0px;
     border-radius: 10px;
@@ -503,6 +505,12 @@
     display: flex;
 }
 
+.comment__icon
+{
+    font-size: 13px;
+    padding-top: 3px;
+}
+
 .comment-right
 {
     margin-left: 10px;
@@ -534,6 +542,7 @@
 .comment_textarea
 {
     margin: 5px 0px;
+    max-width: 100%;
     width: 620px;
     height: 90px;
     background-color: #fff;
@@ -543,11 +552,13 @@
 .comment_form__lower_container
 {
     display: flex;
+    justify-content: space-between;
 }
 
 .comment_form__three_fields
 {
-    margin-right: 17px;
+    display: flex;
+    flex-direction: column;
 }
 
 #comment_url_block
@@ -557,7 +568,8 @@
 
 .comment_form__three_fields-input
 {
-    width: 195px;
+    max-width: 100%;
+    width: 185px;
     height: 30px;
     background-color: #fff;
     border: 1px solid #62585f;
@@ -622,6 +634,17 @@
 
   .single-post-card {
     margin-bottom: 50px;
+  }
+
+  .single-post-card ul
+  {
+      list-style: none;
+  }
+
+  .single-post-card ul li a
+  {
+    text-decoration: none;
+    color: #222222;
   }
   /* //Sidebar portfolio */
 
@@ -1179,7 +1202,7 @@
 
 /* Responsive for Mobile */
 
-@media (max-width: 480px) {
+@media (max-width: 554px) {
     .red-box-container_content__title
     {
         font-size: 25px;
@@ -1188,6 +1211,7 @@
     .red-box-container_content__subtitle
     {
         font-size: 11px;
+        line-height: 20px;
     }
 
     .gallery_header__header
@@ -1245,7 +1269,7 @@
 
 }
 
-@media (max-width: 320px)
+@media (max-width: 390px)
 {
     .red-box-container
     {

@@ -58,10 +58,10 @@
 					<?php
 					wp_nav_menu(
 						array(
-							'menu'           => 'primary',
-							'content'        => 'div',
+							'container'		=> '',
 							'theme_location' => 'primary',
-							'items_wrap'     => '<ul id="urlclass_id" class="urlclass">%3$s</ul>',
+							'items_wrap'     => '%3$s',
+							'wallker'		 => new Assignment_Menu_Walker(),
 						)
 					);
 					// removed 'walker' => new Assignment_Menu_Walker() arg.

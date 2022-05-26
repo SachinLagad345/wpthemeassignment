@@ -33,7 +33,7 @@ function better_comments( $comment, $args, $depth ) {
 							$avatar_size = ! empty( $args['avatar_size'] ) ? $args['avatar_size'] : 70; // set default avatar size
 							echo get_avatar( $comment, $avatar_size );
 						}
-						echo '<i class="fa fa-comment" style="font-size:13px;"></i>';
+						echo '<i class="fa fa-comment comment__icon"></i>';
 
 						echo '<div class="comment-right">';
 						echo '<div class="comment_author-wrapper">';

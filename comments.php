@@ -19,7 +19,7 @@
 			)
 		);
 	}
-	?>
+	?> 
 </div>
 
 <div class="comment_form">

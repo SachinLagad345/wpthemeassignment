@@ -37,7 +37,18 @@ get_template_part( 'template-parts/content', 'feature' );
 		</div>
 		<hr style="height: 1px; width: 100%; background-color: #62585f;">
 
-		<?php get_template_part( 'template-parts/content', 'portfolio' ); ?>
+		<?php
+		$pagename = $wp_query->post->post_type; // gives current page post type.
+		if ( 'portfolio' === $pagename ) {
+			?>
+			<script type="text/javascript">
+		document.getElementById("urlclass_id").children[3].classList.add('current_page_item');
+		console.log("inside script");
+		</script>
+			<?php
+		}
+		get_template_part( 'template-parts/content', 'portfolio' );
+		?>
 	</div>
 </section>
 <!-- //Gallery -->

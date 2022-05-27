@@ -38,7 +38,7 @@
 				$portfolio_query->the_post();
 				?>
 				<div class="galleryin">
-					<a href="<?php the_permalink() ?>" >
+					<a href="<?php the_permalink(); ?>">
 						<img class="gallery_img" src="<?php the_post_thumbnail_url(); ?>" alt="portfolio-thumbnail-new">
 					</a>
 				</div>
@@ -51,7 +51,7 @@
 				the_post();
 				?>
 				<div>
-					<a href="<?php the_post_thumbnail_url() ?>" data-lightbox="mygallery">
+					<a href="<?php the_post_thumbnail_url(); ?>" data-lightbox="mygallery">
 						<img class="gallery_img" src="<?php the_post_thumbnail_url(); ?>" alt="portfolio-thumbnail">
 					</a>
 				</div>
@@ -67,11 +67,13 @@
 <div class="container">
 	<div class="blog__pagination">
 		<?php
-		echo paginate_links(
+		echo esc_url(
+			paginate_links(
 				array(
 					'before_page_number' => '<span class="blog__pagination-item">',
 					'after_page_number'  => '</span>',
 				)
+			)
 		);
 		?>
 	</div>

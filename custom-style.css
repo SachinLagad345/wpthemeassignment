@@ -33,36 +33,45 @@
 }
 
 .urlclass li{
-    padding: 0px 15px;
+    padding: 10px;
+    margin: 0px 5px;
     font-weight: bold;
     font-size: 14px;
-}
-
-.current_page_item a 
-{
-    background-color: #ef4634;
-    color: #ffffff !important;
-    padding: 10px;
     border-radius: 3px;
-  }
+}
 
 .urlclass li a{
     text-decoration: none;
     color: #222222;
 }
 
-
-.urlclass li a:hover{
+.current_page_item
+{
     background-color: #ef4634;
-    color: #ffffff;
     padding: 10px;
     border-radius: 3px;
 }
 
+.urlclass .current_page_item a
+{
+    color: #ffffff;
+}
+
+.urlclass li:hover{
+    background-color: #ef4634;
+    /* padding: 10px; */
+    /* border-radius: 3px; */
+}
+
+.urlclass li a:hover
+{
+    color: #ffffff;
+}
 
 .header__search-form
 {
     display: flex;
+    padding: 10px;
 }
 
 .urlclass_form__search {
@@ -71,6 +80,7 @@
     background-color: #ffffff;
     border: 1px solid #62585f;
     border-radius: 3px;
+    margin-right: 3px;
 }
 
 .hamburger-icon {
@@ -954,6 +964,7 @@
         display: block;
         margin: 10px;
         text-align: center;
+        width: 100%;
     }
 
     .urlclass-responsive li

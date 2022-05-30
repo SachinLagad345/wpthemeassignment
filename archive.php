@@ -22,6 +22,10 @@
 
 ?>
 
+<div id="portfolio__overlay" class="portfolio__overlay-invisible">
+	<div id="portfolio__overlay-imgcontainer" class="portfolio__overlay-imgcontainer">
+	</div>
+</div>
 <?php
 get_header();
 get_template_part( 'template-parts/content', 'feature' );

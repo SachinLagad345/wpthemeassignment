@@ -3,12 +3,12 @@
 	<?php
 	if ( ! have_comments() ) {
 		?>
-		<h2 class="comment_heading"> 0 Comments </h2>
+		<h2 class="comment_heading"> Comments </h2>
 		<hr style="height: 1px; width: 100%; background-color: #62585f;">
 		<?php
 	} else {
 		?>
-		<h2 class="comment_heading"><?php echo get_comments_number(); ?> Comments </h2>
+		<h2 class="comment_heading"> Comments </h2>
 		<hr style="height: 1px; width: 100%; background-color: #62585f;">
 
 		<?php

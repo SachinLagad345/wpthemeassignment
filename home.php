@@ -1,26 +1,9 @@
-<!doctype html>
-<html lang="en-US">
 
-<head>
-	<title><?php echo get_the_title(); ?></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="UTF-8">
-	<!-- fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400;500;700&family=Roboto&family=Rubik+Glitch&family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
-	<!-- // fonts -->
 
-	<!-- icons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<link rel="stylesheet" type="text/css" href="portfolio.css">
 	<?php
 	wp_head();
 	?>
-</head>
 
-<body>
 	<?php
 	get_header();
 	get_template_part( 'template-parts/content', 'feature' );
@@ -48,22 +31,34 @@
 				<!-- Pagination -->
 				<div class="blog__pagination">
 					<?php
-					echo paginate_links(
-						array(
-							'before_page_number' => '<span class="blog__pagination-item">',
-							'after_page_number'  => '</span>',
+				echo paginate_links(
+					array(
+						'before_page_number' => '<span class="blog__pagination-item">',
+						'after_page_number'  => '</span>',
+						'next_text'			 => '<span class="blog__pagination-item">
+													<svg class="blog__pagination-icon" height="12" width="7">
+													<path d="M0 0 L0 12 L7 6 Z" />
+													</svg>
+												</span>',
+						'prev_text'			 => '<span class="blog__pagination-item">
+													<svg class="blog__pagination-icon" height="12" width="7">
+														<path d="M7 0 L7 12 L0 6 Z" />
+													</svg>
+												</span>',
 
-						)
-					);
+					)
+				);
 					?>
 				</div>
 				<!-- //pagination -->
 			</div>
 			<!-- //single post wrapper -->
 
+			<div class="right__sidebar">
 			<?php
 			get_template_part( 'template-parts/content', 'sidebar' );
 			?>
+			</div>
 
 		</div>
 		<!-- //single container -->
@@ -71,5 +66,3 @@
 	<?php
 	get_footer();
 	?>
-
-</html>

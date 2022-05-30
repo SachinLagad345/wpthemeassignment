@@ -38,11 +38,13 @@
 						Tel: 123 4567890; Fax: 123 456789 <br>
 						Email: <a href="mailto: contactus@dsignfy.com">contactus@dsignfy.com</a>
 					</p>
-					<img class="wc__social-icons cursor-pointer" id="wc-fb" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="fb" width="1" height="1">
-					<img class="wc__social-icons cursor-pointer" id="wc-g" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="gplus" width="1" height="1">
-					<img class="wc__social-icons cursor-pointer" id="wc-linkedin" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="gplus" width="1" height="1">
-					<img class="wc__social-icons cursor-pointer" id="wc-pinterest" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="gplus" width="1" height="1">
-					<img class="wc__social-icons cursor-pointer" id="wc-twitter" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="gplus" width="1" height="1">
+					<div class="wc__icon-container">
+					<div class="wc__social-icons cursor-pointer" id="wc-fb" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="fb" width="1" height="1"></div>
+					<div class="wc__social-icons cursor-pointer" id="wc-g" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="gplus" width="1" height="1"></div>
+					<div class="wc__social-icons cursor-pointer" id="wc-linkedin" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="gplus" width="1" height="1"></div>
+					<div class="wc__social-icons cursor-pointer" id="wc-pinterest" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="gplus" width="1" height="1"></div>
+					<div class="wc__social-icons cursor-pointer" id="wc-twitter" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="gplus" width="1" height="1"></div>
+					</div>
 				</div>
 			</div>
 			<hr style="height: 1px; background-color: #62585f; margin-top: 30px;">

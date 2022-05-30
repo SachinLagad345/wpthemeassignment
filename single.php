@@ -26,6 +26,10 @@ get_header();
 get_template_part( 'template-parts/content', 'feature' );
 ?>
 
+<div id="top-sidebar-area">
+	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+</div>
+
 <?php
 if ( have_posts() ) {
 	while ( have_posts() ) {
@@ -62,9 +66,11 @@ if ( have_posts() ) {
 				<!-- //single post wrapper -->
 
 				<!-- single sidebar area -->
+				<div class="right__sidebar">
 				<?php
 				get_template_part( 'template-parts/content', 'sidebar' );
 				?>
+				</div>
 
 			</div>
 			<!-- //single container -->

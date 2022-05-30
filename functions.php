@@ -134,6 +134,20 @@ function register_widget_areas()
 			'description'  => 'right sidebar widget area',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'before_title' => '',
+			'after_title'  => '',
+			'before_widget' => '',
+			'after_widget' => '',
+			'name'		   => 'top-sidebar',
+			'id'		   => 'sidebar-2',
+			'description'  => 'Top sidebar widget area',
+			'class'		   => 'top__sidebar',
+			'id'		   => 'sidebar-2',
+		)
+	);
 }
 
 add_action('widgets_init','register_widget_areas');

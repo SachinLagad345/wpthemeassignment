@@ -77,8 +77,6 @@
 				</div>
 				<!-- //header menu group -->
 
-
-
 			</header>
 		</div>
 		<!-- //container -->

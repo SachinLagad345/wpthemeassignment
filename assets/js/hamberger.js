@@ -44,3 +44,13 @@ function make_white( imgId )
     document.getElementById(contid).classList.remove("portfolio__image-overlay");
     document.getElementById(contid).classList.add("portfolio__image-overlay-hidden");
 }
+
+function disable_overlay()
+{
+    console.log("inside disable overlay");
+	document.getElementById("portfolio__overlay").classList.remove("portfolio__overlay");
+    document.getElementById("portfolio__overlay").classList.add("portfolio__overlay-invisible");
+	let imgCont = document.getElementById("portfolio__overlay-wrapper");
+	imgCont.classList.remove("portfolio__overlay-wrapper");
+	imgCont.classList.add("portfolio__overlay-wrapper-invisible");
+}

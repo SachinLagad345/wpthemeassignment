@@ -22,9 +22,9 @@
 
 ?>
 
-<div id="portfolio__overlay" class="portfolio__overlay-invisible">
-	<div id="portfolio__overlay-imgcontainer" class="portfolio__overlay-imgcontainer">
-	</div>
+<div id="portfolio__overlay" class="portfolio__overlay-invisible"></div>
+<div id="portfolio__overlay-wrapper" class="portfolio__overlay-wrapper-invisible" onclick="disable_overlay()">
+<div id="portfolio__overlay-imgcontainer" class="portfolio__overlay-imgcontainer"></div>
 </div>
 <?php
 get_header();

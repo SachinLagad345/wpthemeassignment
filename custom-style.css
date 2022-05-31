@@ -299,7 +299,7 @@ bottom: 10px;
     padding: 20px 20px 80px 20px;
 }
 
-.portfolio__overlay-imgcontainer::after
+.close__portfolio
 {
     width: 35px;
     height: 35px;
@@ -309,9 +309,13 @@ bottom: 10px;
     position: absolute;
     right: -35px;
     top: 0;
+    background-image: url('http://localhost/wordpress/wp-content/uploads/2022/05/close-icon.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.portfolio__overlay-imgcontainer img
+.portfolio__image
 {
     max-width: 100%;
     max-height: 100%;
@@ -319,6 +323,23 @@ bottom: 10px;
     height: 100%;
     border-radius: 5px;
 }
+
+.portfolio__image-title
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #62585f;
+    margin-top: 28px;
+}
+
+.portfolio__image-title img
+{
+    width: 20px;
+    height: 18px;
+}
+
 
 .lb-data .lb-details
 {
@@ -384,6 +405,7 @@ height: 215px;
 display: block;
 background-color: black;
 opacity: 0.8;
+top: 0px;
 }
 
 .portfolio__image-overlay-hidden
@@ -424,6 +446,11 @@ opacity: 0.8;
     justify-content: center;
     height: 100%;
     align-items: center;
+}
+
+.portfolio__pagination
+{
+    margin-top: 10px;
 }
 
 /* //Gallery- portfolio */
@@ -969,7 +996,13 @@ opacity: 0.8;
     height: 100%;
     padding: 9px 10px;
     line-height: 16px;
-    border: 1px solid white;
+}
+
+.blog__header-gap
+{
+    background-color: white;
+    width: 1px;
+    opacity: 0.4;
 }
 
 .blog__post_title
@@ -979,7 +1012,6 @@ opacity: 0.8;
     display: flex;
     padding-left: 15px;
     align-items: center;
-    border: 1px solid #fff;
     margin-left: -1px;
 }
 

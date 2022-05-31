@@ -22,9 +22,9 @@
 
 ?>
 
-<div id="portfolio__overlay" class="portfolio__overlay-invisible"></div>
-<div id="portfolio__overlay-wrapper" class="portfolio__overlay-wrapper-invisible" onclick="disable_overlay()">
-<div id="portfolio__overlay-imgcontainer" class="portfolio__overlay-imgcontainer"></div>
+<div id="portfolio__overlay" class="portfolio__overlay-invisible" onclick="disable_overlay()"></div>
+<div id="portfolio__overlay-wrapper" class="portfolio__overlay-wrapper-invisible">
+	<div id="portfolio__overlay-imgcontainer" class="portfolio__overlay-imgcontainer"></div>
 </div>
 <?php
 get_header();
@@ -46,13 +46,39 @@ get_template_part( 'template-parts/content', 'feature' );
 		if ( 'portfolio' === $pagename ) {
 			?>
 			<script type="text/javascript">
-		document.getElementById("urlclass_id").children[3].classList.add('current_page_item');
-		console.log("inside script");
-		</script>
+				document.getElementById("urlclass_id").children[3].classList.add('current_page_item');
+				console.log("inside script");
+			</script>
 			<?php
 		}
 		get_template_part( 'template-parts/content', 'portfolio' );
 		?>
+
+		<!--  Pagination -->
+		<div class="portfolio__pagination">
+			<?php
+			echo paginate_links(
+				array(
+					'before_page_number' => '<span class="blog__pagination-item">',
+					'after_page_number'  => '</span>',
+					'next_text'          => '<span class="blog__pagination-item">
+														<svg class="blog__pagination-icon" height="12" width="7">
+														<path d="M0 0 L0 12 L7 6 Z" />
+														</svg>
+													</span>',
+					'prev_text'          => '<span class="blog__pagination-item">
+														<svg class="blog__pagination-icon" height="12" width="7">
+															<path d="M7 0 L7 12 L0 6 Z" />
+														</svg>
+													</span>',
+
+				)
+			);
+			?>
+
+		</div>
+		<!--  //Pagination -->
+
 	</div>
 </section>
 <!-- //Gallery -->

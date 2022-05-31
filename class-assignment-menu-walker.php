@@ -27,7 +27,6 @@
 class Assignment_Menu_Walker extends Walker_Nav_menu {
 
 
-
 	/** Gives each list element style
 	 *
 	 * @param string $output contains string in which HTML would be added.
@@ -36,15 +35,14 @@ class Assignment_Menu_Walker extends Walker_Nav_menu {
 	 * @param array  $args contains optional arguments.
 	 * @param int    $id contains id of current menu.
 	 */
-	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$object      = $item->object;
 		$type        = $item->type;
 		$title       = $item->title;
 		$description = $item->description;
 		$permalink   = $item->url;
 
-		echo 'inside walker';
-		$output .= "<li class='" . implode( ' ', $item->classes ) . " abc'>";
+		$output .= "<li class='myclass " . implode( ' ', $item->classes ) . "'>";
 
 		// Add SPAN if no Permalink.
 		if ( $permalink && '#' !== $permalink ) {

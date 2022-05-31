@@ -56,10 +56,10 @@
 					<?php
 					wp_nav_menu(
 						array(
-							'container'      => '',
 							'theme_location' => 'primary',
 							'items_wrap'     => '<ul id="urlclass_id" class="urlclass">%3$s</ul>',
-							'wallker'        => new Assignment_Menu_Walker(),
+							'walker'         => new Assignment_Menu_Walker(),
+							'fallback_cb'    => 'wp_page_menu',
 						)
 					);
 					// removed 'walker' => new Assignment_Menu_Walker() arg.

@@ -9,7 +9,6 @@ function designfly_add_theme_supports() {
 	add_theme_support( 'custom-logo' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
-	add_theme_support( 'nav-menus' );
 }
 
 add_action( 'after_setup_theme', 'designfly_add_theme_supports' );
@@ -21,14 +20,14 @@ add_action( 'after_setup_theme', 'designfly_add_theme_supports' );
  */
 function designfly_register_menus() {
 	$locations = array(
-		'primary' => 'desktop primary area',
+		'primary' => __( 'desktop primary area' ),
 		'footer'  => 'footer menu area',
 	);
 
 	register_nav_menus( $locations );
 }
 
-add_action( 'init', 'designfly_register_menus' );
+add_action( 'after_setup_theme', 'designfly_register_menus' );
 
 /**
  * This registers stylesheet

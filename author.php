@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Theme Name: WPThemeAssignment
  * Theme URI: https://wordpress.org/themes/wpthemeassignment/
@@ -45,7 +44,6 @@ get_template_part( 'template-parts/content', 'feature' );
 			</h2>
 			<hr style="height: 1px; background-color: #62585f; margin: 10px 0px;">
 			<?php
-			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 			if ( have_posts() ) {
 				while ( have_posts() ) {
@@ -62,12 +60,12 @@ get_template_part( 'template-parts/content', 'feature' );
 					array(
 						'before_page_number' => '<span class="blog__pagination-item">',
 						'after_page_number'  => '</span>',
-						'next_text'			 => '<span class="blog__pagination-item">
+						'next_text'          => '<span class="blog__pagination-item">
 													<svg class="blog__pagination-icon" height="12" width="7">
 													<path d="M0 0 L0 12 L7 6 Z" />
 													</svg>
 												</span>',
-						'prev_text'			 => '<span class="blog__pagination-item">
+						'prev_text'          => '<span class="blog__pagination-item">
 													<svg class="blog__pagination-icon" height="12" width="7">
 														<path d="M7 0 L7 12 L0 6 Z" />
 													</svg>

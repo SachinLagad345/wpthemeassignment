@@ -25,13 +25,13 @@
 	<!-- blog post header-->
 	<div class="blog__post_header">
 		<div class="blog__post_date">
-			<p>
+			<p class="blog__post-date-num">
 				<?php
 				$date_s = explode( ' ', get_the_date( 'j M' ) );
 				echo esc_attr( $date_s[0] );
 				?>
 			</p>
-			<p>
+			<p class="blog__post-date-month">
 				<?php
 				echo esc_attr( $date_s[1] );
 				?>

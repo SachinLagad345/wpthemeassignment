@@ -30,6 +30,10 @@
 get_header();
 get_template_part( 'template-parts/content', 'feature' );
 ?>
+<div id="top-sidebar-area">
+	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+</div>
+
 <!-- Gallery -->
 <section class="gallery_section">
 	<div class="gallery_container">

@@ -26,7 +26,9 @@
 get_header();
 get_template_part( 'template-parts/content', 'feature' );
 ?>
-
+<div id="top-sidebar-area">
+	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+</div>
 
 
 <!-- Blog and Sidebar Section -->

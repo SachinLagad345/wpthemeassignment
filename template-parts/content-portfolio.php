@@ -56,8 +56,8 @@
 					<?php
 					$link_img = get_the_post_thumbnail_url();
 					?>
-
-					<a id="<?php echo esc_html( 'portfolio-image-wrap' . $myid ); ?>" onclick="zoom_portfolio_two(<?php echo esc_html( $myid ); ?>)" my-title="<?php esc_html( the_title() ); ?>" onmouseover="make_black(<?php echo esc_html( $myid ); ?>)" onmouseout="make_white(<?php echo esc_html( $myid ); ?>)">
+	
+					<a id="<?php echo esc_html( 'portfolio-image-wrap' . $myid ); ?>" onclick="zoom_portfolio_two(<?php echo esc_html( $myid ); ?>)" my-title="<?php esc_html( the_title() ); ?>" onmouseover="make_black(<?php echo esc_html( $myid ); ?>)" onmouseout="make_white(<?php echo esc_html( $myid ); ?>)" >
 						<img id="<?php echo esc_html( 'gallery_img' . $myid ); ?>" class="gallery_img" src="<?php esc_html( the_post_thumbnail_url() ); ?>" alt="portfolio-thumbnail">
 						<div id="<?php echo esc_html( 'portfolio-image-overlay' . $myid ); ?>" class="portfolio__image-overlay-hidden">
 							<div class='portfolio__image-text'> View image </div>

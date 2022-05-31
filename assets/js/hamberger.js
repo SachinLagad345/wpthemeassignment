@@ -69,9 +69,14 @@ function zoom_portfolio_two(thumbID) {
 function make_black(imgId) {
 
     let contid = "portfolio-image-overlay" + imgId;
-    console.log("id inside over " + contid);
+    // console.log("id inside over " + contid);
     document.getElementById(contid).classList.remove("portfolio__image-overlay-hidden");
     document.getElementById(contid).classList.add("portfolio__image-overlay");
+
+    let ht = document.getElementById('gallery_img'+imgId).clientHeight;
+    let wdth = document.getElementById('gallery_img'+imgId).clientWidth;
+    let dmnvalue = "width:" + wdth + "; height:" + ht + ";";
+    document.getElementById(contid).setAttribute( 'style', dmnvalue );
 
     // imgWrap.innerHTML += "<div class='portfolio__image-hover'> <div class='portfolio__image-text'> View image </div> </div>";
 }

@@ -28,7 +28,6 @@ function zoom_portfolio(thumb_id) {
 
 function zoom_portfolio_two(thumbID) {
 
-    // console.log("changed check clicking");
     if (thumbID > 6) {
         thumbID = 1;
     }
@@ -69,7 +68,6 @@ function zoom_portfolio_two(thumbID) {
 function make_black(imgId) {
 
     let contid = "portfolio-image-overlay" + imgId;
-    // console.log("id inside over " + contid);
     document.getElementById(contid).classList.remove("portfolio__image-overlay-hidden");
     document.getElementById(contid).classList.add("portfolio__image-overlay");
 
@@ -78,7 +76,6 @@ function make_black(imgId) {
     let dmnvalue = "width:" + wdth + "; height:" + ht + ";";
     document.getElementById(contid).setAttribute( 'style', dmnvalue );
 
-    // imgWrap.innerHTML += "<div class='portfolio__image-hover'> <div class='portfolio__image-text'> View image </div> </div>";
 }
 
 function make_white(imgId) {
@@ -88,7 +85,6 @@ function make_white(imgId) {
 }
 
 function disable_overlay() {
-    console.log("inside disable overlay");
     document.getElementById("portfolio__overlay").classList.remove("portfolio__overlay");
     document.getElementById("portfolio__overlay").classList.add("portfolio__overlay-invisible");
     let imgCont = document.getElementById("portfolio__overlay-wrapper");

@@ -29,22 +29,22 @@
 				<div class="feature_content__column">
 					<img class="feature__icon" src="<?php echo esc_attr( get_template_directory_uri() ); ?>/assets/images/feature-icons-1.png" alt="">
 					<div class="feature_content__text">
-						<h2 class="feature_content__heading">Advertising</h2>
-						<p class="feature_content__description">Neque porro quisquam est, dolorem ipsum quia dolor amet...</p>
+						<h2 class="feature_content__heading"><?php esc_html_e( 'Advertising', 'wpthemeassignment' ); ?></h2>
+						<p class="feature_content__description"><?php esc_html_e( 'Neque porro quisquam est, dolorem ipsum quia dolor amet...', 'wpthemeassignment' ); ?></p>
 					</div>
 				</div>
 				<div class="feature_content__column">
 					<img class="feature__icon" src="<?php echo esc_attr( get_template_directory_uri() ); ?>/assets/images/feature-icons-2.png" alt="">
 					<div class="feature_content__text">
-						<h2 class="feature_content__heading">Multimedia</h2>
-						<p class="feature_content__description">Neque porro quisquam est, dolorem ipsum quia dolor amet...</p>
+						<h2 class="feature_content__heading"> <?php esc_html_e( 'Multimedia', 'wpthemeassignment' ); ?></h2>
+						<p class="feature_content__description"><?php esc_html_e( 'Neque porro quisquam est, dolorem ipsum quia dolor amet...', 'wpthemeassignment' ); ?></p>
 					</div>
 				</div>
 				<div class="feature_content__column">
 					<img class="feature__icon" src="<?php echo esc_attr( get_template_directory_uri() ); ?>/assets/images/feature-icons-3.png" alt="">
 					<div class="feature_content__text">
-						<h2 class="feature_content__heading">Photography</h2>
-						<p class="feature_content__description">Neque porro quisquam est, ip dolorem ipsum quia dolor amet...</p>
+						<h2 class="feature_content__heading"><?php esc_html_e( 'Photography', 'wpthemeassignment' );?></h2>
+						<p class="feature_content__description"><?php esc_html_e( 'Neque porro quisquam est, ip dolorem ipsum quia dolor amet...', 'wpthemeassignment' ); ?></p>
 					</div>
 				</div>
 			</div>

@@ -396,6 +396,7 @@ bottom: 10px;
 .portfolio-image-wrap
 {
     position: relative;
+    max-width: 100%;
 }
 
 .portfolio__image-overlay
@@ -1351,9 +1352,10 @@ top: 0px;
     .gallery
     {
         display: grid;
-        grid-template-columns: auto auto;
-        grid-column-gap: 10px;
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 9px;
         padding-top: 7px;
+        margin-left: -5px;
     }
     
     .gallery_img

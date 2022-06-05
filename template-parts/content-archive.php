@@ -39,7 +39,7 @@
 		</div>
 		<div class="blog__header-gap"></div>
 		<div class="blog__post_title">
-		<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		</div>
 	</div>
 	<!-- //blog post header-->

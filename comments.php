@@ -50,9 +50,7 @@
 	<?php
 	global $current_user;
 	wp_get_current_user();
-	// echo get_the_author().
 	$is_author = get_the_author();
-	// echo 'checking value is '.
 	if ( $is_author === $current_user->user_login ) {
 		$fields        = array();
 		$comment_field = '<input type="textarea" id="comment" name="comment" class="comment_textarea" required="required"></input>';

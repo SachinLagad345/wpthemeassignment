@@ -43,7 +43,7 @@
 				<div class="feature_content__column">
 					<img class="feature__icon" src="<?php echo esc_attr( get_template_directory_uri() ); ?>/assets/images/feature-icons-3.png" alt="">
 					<div class="feature_content__text">
-						<h2 class="feature_content__heading"><?php esc_html_e( 'Photography', 'wpthemeassignment' );?></h2>
+						<h2 class="feature_content__heading"><?php esc_html_e( 'Photography', 'wpthemeassignment' ); ?></h2>
 						<p class="feature_content__description"><?php esc_html_e( 'Neque porro quisquam est, ip dolorem ipsum quia dolor amet...', 'wpthemeassignment' ); ?></p>
 					</div>
 				</div>

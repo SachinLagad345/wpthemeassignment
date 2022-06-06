@@ -50,7 +50,7 @@
 		</div>
 		<div class="blog__post_right_body">
 			<div class="blog__post_subheading">
-				<p> by <a href="<?php get_author_link( true, get_the_author_ID() ); ?>"><span class="blog__author-name"><?php the_author(); ?></span></a> on <?php echo get_the_date( 'j M Y' ); ?></p>
+				<p> by <a href="<?php echo esc_html( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><span class="blog__author-name"><?php the_author(); ?></span></a> on <?php echo get_the_date( 'j M Y' ); ?></p>
 				<p class="blog__author-name"> <?php echo esc_attr( get_comments_number() ); ?> comments </p>
 			</div>
 			<hr style="height: 1px; width: 100%; background-color: #62585f; margin: 5px 0px;">

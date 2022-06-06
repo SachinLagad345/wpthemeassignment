@@ -43,7 +43,7 @@ if ( have_posts() ) {
 				<div class="single-post-wrapper">
 					<h1 class="single-post_heading"><?php echo esc_html( the_title() ); ?> </h1>
 					<div class="single_post_subheading__container">
-						<p class="single-post__subheading_para"> by <a href="<?php get_author_link( true, get_the_author_ID() ); ?>"><span class="author_name"><?php echo get_the_author(); ?></span></a> on <span class="author_name"><?php echo get_the_date(); ?></span></p>
+						<p class="single-post__subheading_para"> by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><span class="author_name"><?php echo get_the_author(); ?></span></a> on <span class="author_name"><?php echo get_the_date(); ?></span></p>
 						<p class="author_name"> <?php echo esc_html( get_comments_number() ); ?> comments </p>
 					</div>
 					<!-- //single post subheading container -->

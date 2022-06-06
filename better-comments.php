@@ -69,13 +69,14 @@ function better_comments( $comment, $args, $depth ) {
 						echo '<div class="comment-right">';
 						echo '<div class="comment_author-wrapper">';
 						// Display author name.
+						/* translators: %s: search term */
 						printf( esc_html__( '<cite class="fn">%s</cite> <span class="says">said on</span>', 'wpthemeassignment' ), get_comment_author_link() );
 						?>
 
 						<a href="<?php echo esc_html( htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ); ?>">
 							<?php
-							/* translators: 1: date, 2: time */
 							printf(
+								/* translators: 1: date, 2: time */
 								esc_html__( '%1$s at %2$s', 'wpthemeassignment' ),
 								esc_url( get_comment_date() ),
 								esc_url( get_comment_time() )
